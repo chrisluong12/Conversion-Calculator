@@ -15,7 +15,19 @@ class ConverterViewController: UICollectionViewController {
     @IBOutlet weak var outputDisplay: UITextField!
     @IBOutlet weak var inputDisplay: UITextField!
     
+    struct Conversion {
+        let label: String?
+        let inputUnit: String?
+        let outputUnit: String?
+        
+    }
     
+    let conversions = [
+        Conversion(label: "fahrenheit to celcius", inputUnit: "°F", outputUnit: "°C"),
+        Conversion(label: "celcius to fahrenheit", inputUnit: "°C", outputUnit: "°F"),
+        Conversion(label: "miles to kilometers", inputUnit: "mi", outputUnit: "km"),
+        Conversion(label: "kilometers to miles", inputUnit: "km", outputUnit: "mi"),
+    ]
     
     override func viewDidLoad() {
         super.viewDidLoad()
